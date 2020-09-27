@@ -1,0 +1,70 @@
+\documentclass{article}
+
+% Load Packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[margin = 1in]{geometry}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage[yyyymmdd, hhmmss]{datetime}
+
+% Environments
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+\theoremstyle{remark}
+\newtheorem{remark}[thm]{Remark}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{exmp}{Example}
+
+% Reference
+\newcommand{\figureref}[1]{\hyperref[#1]{Figure~\ref*{#1}}}
+\newcommand{\tableref}[1]{\hyperref[#1]{Table~\ref*{#1}}}
+\newcommand{\remarkref}[1]{\hyperref[#1]{Remark~\ref*{#1}}}
+\newcommand{\exampleref}[1]{\hyperref[#1]{Example~\ref*{#1}}}
+\newcommand{\thmref}[1]{\hyperref[#1]{Theorem~\ref*{#1}}}
+\newcommand{\propref}[1]{\hyperref[#1]{Proposition~\ref*{#1}}}
+\newcommand{\lemmaref}[1]{\hyperref[#1]{Lemma~\ref*{#1}}}
+\newcommand{\corref}[1]{\hyperref[#1]{Corollary~\ref*{#1}}}
+\newcommand{\defnref}[1]{\hyperref[#1]{Definition~\ref*{#1}}}
+
+% Lectures
+\newcommand{\lecture}[3]{
+	\marginpar{
+		Lecture #1 \\ 
+		#2 \\ 
+		#3
+	}
+}
+
+% Bubbles
+\newcommand{\CC}{\mathbb{C}} % Complex
+\newcommand{\FF}{\mathbb{F}} % Complex (and Real)
+\newcommand{\NN}{\mathbb{N}} % Natural
+\newcommand{\PP}{\mathbb{P}} % Probability
+\newcommand{\QQ}{\mathbb{Q}} % Rational
+\newcommand{\RR}{\mathbb{R}} % Real
+\newcommand{\ZZ}{\mathbb{Z}} % Integer
+
+% Calligraphics
+\newcommand{\FFF}{\mathcal{F}} % Measure (usually event space)
+\newcommand{\SSS}{\mathcal{S}}
+\newcommand{\TTT}{\mathcal{T}}
+
+% Header
+\pagestyle{fancy}
+\lhead{\course}
+\rhead{\nouppercase{\leftmark}}
+
+% Title
+\title{\course}
+\author{Jack Yang}
+\date{Last Updated: \today\ at \currenttime}
